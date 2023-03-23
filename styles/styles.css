@@ -3,6 +3,11 @@ body {
 }
 
 /* Headings */
+header {
+    text-align: center;
+    margin: 35px 0 ;
+}
+
 .website-heading {
     font-family: 'Delicious Handrawn', cursive;
     font-weight: 400;
@@ -22,5 +27,26 @@ body {
 .create-task {
     position: absolute;
     right: 15px;
-    top: 15px;
+    top: 30px;
+}
+
+/* Hashtag filter */
+
+.hashtag-selector {
+    list-style: none;
+}
+
+/* Main Content */
+p {
+    font-size: 16pt;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.hashtag {
+    text-transform: uppercase;
 }
