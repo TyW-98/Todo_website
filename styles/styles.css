@@ -1,0 +1,26 @@
+body {
+    background-color: bisque;
+}
+
+/* Headings */
+.website-heading {
+    font-family: 'Delicious Handrawn', cursive;
+    font-weight: 400;
+    color: rgb(201, 139, 46);
+    font-size: 45pt;
+    text-transform: uppercase;
+    width: max-content;
+    display: inline;
+}
+
+.logo {
+    display: inline;
+    width: 68px;
+    height: 68px;
+}
+
+.create-task {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
