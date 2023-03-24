@@ -45,12 +45,6 @@ body {
     height: 4.25rem;
 }
 
-.create-task {
-    position: absolute;
-    right: 0.9375rem;
-    top: 1.875rem;
-}
-
 /* Form section */
 .input-form {
     background-color: #374151;
@@ -58,6 +52,25 @@ body {
     padding: 0.9375rem 0;
     text-align: center;
 }
+
+/* button styles */
+.btn {
+    border: none;
+    padding: 5px;
+    font-family: 'Anton', sans-serif;
+    font-size: 16pt;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+.create-task {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.875rem;
+    background-image: linear-gradient(135deg, rgb(160, 110, 17), rgb(192, 161, 24), red);
+    padding: 5px 15px;
+}
+
 
 /* main body */
 

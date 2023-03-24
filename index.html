@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=PT+Sans+Narrow&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Delicious+Handrawn&family=PT+Sans+Narrow&display=swap"
       rel="stylesheet"
     />
 
@@ -22,7 +22,7 @@
           <img src="images/logo.png" alt="logo-image" class="logo" />
           <h1 class="website-heading">Task needs to be done</h1>
         </div>
-        <button type="button" class="create-task">Enter new task</button>
+        <button type="button" class="create-task btn">Enter new task</button>
       </header>
 
       <form class="input-form">
@@ -34,16 +34,16 @@
           <option value="technology">Technology</option>
           <option value="social">Social</option>
         </select>
-        <button type="button">Post</button>
+        <button type="button" class="btn">Post</button>
       </form>
 
       <main>
         <div class="main-body">
           <aside>
             <ul class="hashtag-selector">
-              <li><button type="button">All</button></li>
-              <li><button type="button">Technology</button></li>
-              <li><button type="button">Social</button></li>
+              <li><button type="button" class="btn">All</button></li>
+              <li><button type="button" class="btn">Technology</button></li>
+              <li><button type="button" class="btn">Social</button></li>
             </ul>
           </aside>
           <section id="main-content">
@@ -51,8 +51,10 @@
               <li class="task-item">
                 <p>
                   React is being developed by Meta (formerly facebook)
-                  <a href="https://opensource.fb.com/" target="_blank" 
-                  class="source"
+                  <a
+                    href="https://opensource.fb.com/"
+                    target="_blank"
+                    class="source"
                     >(Source)</a
                   >
                 </p>
