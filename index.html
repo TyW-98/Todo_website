@@ -17,8 +17,10 @@
   </head>
   <body>
     <header class="heading">
-      <img src="images/logo.png" alt="logo-image" class="logo" />
-      <h1 class="website-heading">Task needs to be done</h1>
+      <div class="title">
+        <img src="images/logo.png" alt="logo-image" class="logo" />
+        <h1 class="website-heading">Task needs to be done</h1>
+      </div>
       <button type="button" class="create-task">Enter new task</button>
     </header>
 
@@ -35,47 +37,51 @@
     </form>
 
     <main>
-      <aside>
-        <ul class="hashtag-selector">
-          <li><button type="button">All</button></li>
-          <li><button type="button">Technology</button></li>
-          <li><button type="button">Social</button></li>
-        </ul>
-      </aside>
-      <section id="main-content">
-        <ul class="task-list">
-          <li class="task-item">
-            <p>
-              React is being developed by Meta (formerly facebook)
+      <div class="main-body">
+        <aside>
+          <ul class="hashtag-selector">
+            <li><button type="button">All</button></li>
+            <li><button type="button">Technology</button></li>
+            <li><button type="button">Social</button></li>
+          </ul>
+        </aside>
+        <section id="main-content">
+          <ul class="task-list">
+            <li class="task-item">
+              <p>
+                React is being developed by Meta (formerly facebook)
+                <a href="https://opensource.fb.com/" target="_blank"
+                  >(Source)</a
+                >
+              </p>
               <span class="hashtag">#Technology</span>
-              <a href="https://opensource.fb.com/" target="_blank">(Source)</a>
-            </p>
-            <div>
-              <button type="button">👍 <strong>1</strong></button>
-              <button type="button">🚀 <strong>2</strong></button>
-              <button type="button">👎 <strong>3</strong></button>
-            </div>
-          </li>
-          <li class="task-item">
-            <p>
-              Millennial dads spend 3 times as much time with their kids than
-              their fathers spent with them. In 1982, 43% of fathers had never
-              changed a diaper. Today, that number is down to 3%
+              <div class="emoji-buttons">
+                <button type="button">👍 <strong>1</strong></button>
+                <button type="button">🚀 <strong>2</strong></button>
+                <button type="button">👎 <strong>3</strong></button>
+              </div>
+            </li>
+            <li class="task-item">
+              <p>
+                Millennial dads spend 3 times as much time with their kids than
+                their fathers spent with them. In 1982, 43% of fathers had never
+                changed a diaper. Today, that number is down to 3%
+                <a
+                  href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+                  target="_blank"
+                  >(Source)</a
+                >
+              </p>
               <span class="hashtag"> #Social</span>
-              <a
-                href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
-                target="_blank"
-                >(Source)</a
-              >
-            </p>
-            <div>
-              <button type="button">👍 <strong>1</strong></button>
-              <button type="button">🚀 <strong>2</strong></button>
-              <button type="button">👎 <strong>3</strong></button>
-            </div>
-          </li>
-        </ul>
-      </section>
+              <div class="emoji-buttons">
+                <button type="button">👍 <strong>1</strong></button>
+                <button type="button">🚀 <strong>2</strong></button>
+                <button type="button">👎 <strong>3</strong></button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
   </body>
 </html>

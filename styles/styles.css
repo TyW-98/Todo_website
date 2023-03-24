@@ -13,35 +13,52 @@ body {
 /* Headings */
 .heading {
     text-align: center;
-    margin: 35px 0;
+    margin: 2.1875rem 0;
+}
+
+.title {
+    align-items: center;
 }
 
 .website-heading {
     font-family: 'Delicious Handrawn', cursive;
     font-weight: 400;
     color: rgb(201, 139, 46);
-    font-size: 45pt;
+    font-size: 2.8125rem;
     text-transform: uppercase;
     width: max-content;
     display: inline;
-    text-shadow: 5px 10px rgba(187,213,224,0.1);
+    text-shadow: 0.3125rem 0.625rem rgba(187, 213, 224, 0.1);
+    position: relative;
+    bottom: 0.625rem;
+    margin-left: 0.625rem;
 }
 
 .logo {
     display: inline;
-    width: 68px;
-    height: 68px;
+    width: 4.25rem;
+    height: 4.25rem;
 }
 
 .create-task {
     position: absolute;
-    right: 15px;
-    top: 30px;
+    right: 0.9375rem;
+    top: 1.875rem;
 }
 
 /* Form section */
 .input-form {
     background-color: #374151;
+    margin: 0.9375rem;
+    padding: 0.9375rem 0;
+    text-align: center;
+}
+
+/* main body */
+
+.main-body {
+    display: grid;
+    grid-template-columns: max-content max-content;
 }
 
 /* Hashtag filter */
@@ -57,17 +74,24 @@ body {
 }
 
 .task-item {
-    font-size: 16pt;
+    font-size: 1rem;
     line-height: 1.4;
     color: #fafafa;
     background-color: #374151;
-    margin: 0 15px 25px;
-    padding: 10px 25px;
-    box-shadow: 5px 7.5px rgba(187, 213, 224, 0.582);
+    margin: 0 0.9375rem 1.5625rem;
+    padding: 0.625rem 1.5625rem;
+    box-shadow: 0.3125rem 0.46875rem rgba(187, 213, 224, 0.582);
+    display: flex;
+    align-items: center;
 }
 
 .hashtag {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 12pt;
+    font-size: 0.75rem;
+    margin-left: 1.5625rem;
+}
+
+.emoji-buttons {
+    margin-left: auto;
 }
