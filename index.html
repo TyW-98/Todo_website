@@ -9,21 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=PT+Sans+Narrow&display=swap"
       rel="stylesheet"
     />
 
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
-    <header>
+    <header class="heading">
       <img src="images/logo.png" alt="logo-image" class="logo" />
       <h1 class="website-heading">Task needs to be done</h1>
       <button type="button" class="create-task">Enter new task</button>
     </header>
 
-    <form>
+    <form class="input-form">
       <input type="text" placeholder="Put your task here" />
+      <span>200</span>
       <input type="text" placeholder="What source" />
       <select>
         <option value="">Choose a category</option>
@@ -43,7 +44,7 @@
       </aside>
       <section id="main-content">
         <ul class="task-list">
-          <li>
+          <li class="task-item">
             <p>
               React is being developed by Meta (formerly facebook)
               <span class="hashtag">#Technology</span>
@@ -55,7 +56,7 @@
               <button type="button">👎 <strong>3</strong></button>
             </div>
           </li>
-          <li>
+          <li class="task-item">
             <p>
               Millennial dads spend 3 times as much time with their kids than
               their fathers spent with them. In 1982, 43% of fathers had never
