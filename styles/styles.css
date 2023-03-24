@@ -61,9 +61,9 @@ body {
     line-height: 1.4;
     color: #fafafa;
     background-color: #374151;
-    margin-bottom: 15px;
+    margin: 0 15px 25px;
     padding: 10px 25px;
-    box-shadow: 5px 7.5px rgba(187,213,224,0.25);
+    box-shadow: 5px 7.5px rgba(187, 213, 224, 0.582);
 }
 
 .hashtag {
