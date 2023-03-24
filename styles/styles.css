@@ -67,10 +67,33 @@ body {
     position: absolute;
     right: 1.5rem;
     top: 1.875rem;
-    background-image: linear-gradient(135deg, rgb(160, 110, 17), rgb(192, 161, 24), red);
+    background-image: linear-gradient(135deg, rgb(160, 110, 17), rgb(192, 161, 24));
     padding: 5px 15px;
 }
 
+.btn-post {
+    width: max-content;
+    padding: 2.5px 10px;
+    font-size: 12pt;
+    margin-left: 25px;
+}
+
+.btn-all, .btn-tech, .btn-social {
+    margin: 5px 0;
+    width: 80%;
+}
+
+.btn-all {
+    background-image: linear-gradient(45deg, rgba(36, 127, 163, 0.76), rgb(56, 184, 124));
+}
+
+.btn-tech {
+    background-color: rgba(66, 162, 201, 0.877);
+}
+
+.btn-social {
+    background-color: rgb(56, 184, 124);
+}
 
 /* main body */
 
@@ -85,6 +108,10 @@ body {
  
 .hashtag-selector {
     list-style: none;
+}
+
+.hashtag-column {
+    text-align: center;
 }
 
 /* Main Content */

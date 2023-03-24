@@ -34,17 +34,23 @@
           <option value="technology">Technology</option>
           <option value="social">Social</option>
         </select>
-        <button type="button" class="btn">Post</button>
+        <button type="button" class="btn btn-post">Post</button>
       </form>
 
       <main>
         <div class="main-body">
           <aside>
-            <ul class="hashtag-selector">
-              <li><button type="button" class="btn">All</button></li>
-              <li><button type="button" class="btn">Technology</button></li>
-              <li><button type="button" class="btn">Social</button></li>
-            </ul>
+            <div class="hashtag-column">
+              <ul class="hashtag-selector">
+                <li><button type="button" class="btn btn-all">All</button></li>
+                <li>
+                  <button type="button" class="btn btn-tech">Technology</button>
+                </li>
+                <li>
+                  <button type="button" class="btn btn-social">Social</button>
+                </li>
+              </ul>
+            </div>
           </aside>
           <section id="main-content">
             <ul class="task-list">
