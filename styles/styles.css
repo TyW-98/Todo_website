@@ -114,6 +114,11 @@ body {
     margin-left: 1.5625rem;
 }
 
+.btn-post:hover {
+    background-color: #2d456e;
+    color: white;
+}
+
 .btn-all, .btn-tech, .btn-social {
     margin: 5px 0;
     width: 80%;
