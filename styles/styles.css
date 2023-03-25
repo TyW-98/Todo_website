@@ -18,70 +18,72 @@ body {
 /* Headings */
 .heading {
     text-align: center;
-    margin: 2.1875rem 0;
+    margin: 35px 0;
 }
 
 .title {
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: center;
 }
 
 .website-heading {
     font-family: 'Delicious Handrawn', cursive;
     font-weight: 400;
     color: rgb(201, 139, 46);
-    font-size: 2.8125rem;
+    font-size: 30pt;
     text-transform: uppercase;
     width: max-content;
     display: inline;
-    text-shadow: 0.3125rem 0.625rem rgba(187, 213, 224, 0.1);
+    text-shadow: 5px 10px rgba(187, 213, 224, 0.1);
     position: relative;
-    bottom: 0.625rem;
-    margin-left: 0.625rem;
+    bottom: 10px;
+    margin-left: 10px;
 }
 
 .logo {
     display: inline;
-    width: 4.25rem;
-    height: 4.25rem;
+    width: 68px;
+    height: 68px;
 }
 
 /* Form section */
 .input-form {
     background-color: #374151;
-    margin: 0.9375rem;
-    padding: 0.9375rem 0;
+    margin: 15px;
+    padding: 15px 0;
     text-align: center;
 }
 
 /* button styles */
 .btn {
     border: none;
-    padding: .3125rem;
+    padding: 5px;
     font-family: 'Anton', sans-serif;
-    font-size: 16pt;
+    font-size: 21.328px;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-    border-radius: 6.25rem;
+    border-radius: 100px;
     cursor: pointer;
 }
 
 .create-task {
-    position: absolute;
-    right: 1.5rem;
-    top: 1.875rem;
     background-image: linear-gradient(135deg, rgb(160, 110, 17), rgb(192, 161, 24));
-    padding: .3125rem .9375rem;
+    padding: 5px 10px;
+    height: max-content;
+    position: relative;
+    top: 1.25rem;
 }
 
 .btn-post {
     width: max-content;
-    padding: .1563rem .625rem;
+    padding: 2.5008px 10px;
     font-size: 12pt;
-    margin-left: 1.5625rem;
+    margin-left: 25px;
 }
 
 .btn-all, .btn-tech, .btn-social {
-    margin: 5px 0;
+    margin: .3125rem 0;
     width: 80%;
 }
 
@@ -106,9 +108,9 @@ body {
 
 .main-body {
     display: grid;
-    grid-template-columns: 15.625rem 1fr;
-    margin-left: 1.5625rem;
-    gap: 3rem;
+    grid-template-columns: 250px 1fr;
+    margin-left: 25px;
+    gap: 48px;
 }
 
 /* Hashtag filter */
@@ -128,13 +130,13 @@ body {
 }
 
 .task-item {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.4;
     color: #fafafa;
     background-color: #374151;
-    margin: 0 0.9375rem 1.5625rem;
-    padding: 0.625rem 1.5625rem;
-    box-shadow: 0.3125rem 0.46875rem rgba(187, 213, 224, 0.582);
+    margin: 0 15px 25px;
+    padding: 10px 25px;
+    box-shadow: 5px 7.5px rgba(187, 213, 224, 0.582);
     display: flex;
     align-items: center;
 }
@@ -142,11 +144,11 @@ body {
 .hashtag {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.75rem;
-    margin-left: 1.5625rem;
-    padding: .1563rem .625rem;
-    margin: 0 15px;
-    border-radius: 50px;
+    font-size: 12px;
+    margin-left: 25px;
+    padding: 2.5008px 10px;
+    margin: 0 .9375rem;
+    border-radius: 3.125rem;
 }
 
 .hashtag-tech {
@@ -157,17 +159,17 @@ body {
     background-color: rgb(56, 184, 124);
 }
 
-.emoji-buttons {
-    margin-left: auto;
-}
-
 .source:link, .source:visited {
     color: aquamarine;
     text-decoration: none;
-    margin-left: 1.5625rem;
+    margin-left: .625rem;
 }
 
 .source:hover, .source:active {
     color: rgb(113, 187, 221);
     transition: 0.15s ease-in;
 }
+
+.emoji-buttons {
+    margin-left: auto;
+}   

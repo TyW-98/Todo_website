@@ -15,14 +15,17 @@
 
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
+
   <body>
     <div class="container">
       <header class="heading">
         <div class="title">
-          <img src="images/logo.png" alt="logo-image" class="logo" />
-          <h1 class="website-heading">Task needs to be done</h1>
+          <div class="intro-text">
+            <img src="images/logo.png" alt="logo-image" class="logo" />
+            <h1 class="website-heading">Task needs to be done</h1>
+          </div>
+          <button type="button" class="create-task btn">Enter new task</button>
         </div>
-        <button type="button" class="create-task btn">Enter new task</button>
       </header>
 
       <form class="input-form">
@@ -66,9 +69,15 @@
                 </p>
                 <span class="hashtag hashtag-tech">#Technology</span>
                 <div class="emoji-buttons">
-                  <button type="button">👍 <strong>1</strong></button>
-                  <button type="button">🚀 <strong>2</strong></button>
-                  <button type="button">👎 <strong>3</strong></button>
+                  <button type="button" class="btn-emote">
+                    👍 <strong>1</strong>
+                  </button>
+                  <button type="button" class="btn-emote">
+                    🚀 <strong>2</strong>
+                  </button>
+                  <button type="button" class="btn-emote">
+                    👎 <strong>3</strong>
+                  </button>
                 </div>
               </li>
               <li class="task-item">
@@ -85,9 +94,15 @@
                 </p>
                 <span class="hashtag hashtag-social"> #Social</span>
                 <div class="emoji-buttons">
-                  <button type="button">👍 <strong>1</strong></button>
-                  <button type="button">🚀 <strong>2</strong></button>
-                  <button type="button">👎 <strong>3</strong></button>
+                  <button type="button" class="btn-emote">
+                    👍 <strong>1</strong>
+                  </button>
+                  <button type="button" class="btn-emote">
+                    🚀 <strong>2</strong>
+                  </button>
+                  <button type="button" class="btn-emote">
+                    👎 <strong>3</strong>
+                  </button>
                 </div>
               </li>
             </ul>
