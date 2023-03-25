@@ -18,7 +18,7 @@ body {
 /* Headings */
 .heading {
     text-align: center;
-    margin: 35px 0;
+    margin: 2.1875rem 0;
 }
 
 .title {
@@ -35,24 +35,48 @@ body {
     text-transform: uppercase;
     width: max-content;
     display: inline;
-    text-shadow: 5px 10px rgba(187, 213, 224, 0.1);
+    text-shadow: .3125rem .625rem rgba(187, 213, 224, 0.1);
     position: relative;
-    bottom: 10px;
-    margin-left: 10px;
+    bottom: .625rem;
+    margin-left: .625rem;
 }
 
 .logo {
     display: inline;
-    width: 68px;
-    height: 68px;
+    width: 4.25rem;
+    height: 4.25rem;
 }
 
 /* Form section */
 .input-form {
-    background-color: #374151;
-    margin: 15px;
-    padding: 15px 0;
-    text-align: center;
+    background-color: #374151;;
+    padding: 15px 15px;
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 50px;
+}
+
+.input-form input, .input-form select {
+    width: 15.625rem;
+    background-color: #546480;
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.input-form input:first-child {
+    flex-grow: 1;
+}
+
+.input-form input::placeholder {
+    color: #fafafa;
+}
+
+.input-form span {
+    font-weight: 600;
+    font-size: 16pt;
+    color: white;
 }
 
 /* button styles */
@@ -63,7 +87,7 @@ body {
     font-size: 21.328px;
     color: rgb(0, 0, 0);
     text-transform: uppercase;
-    border-radius: 100px;
+    border-radius: 6.25rem;
     cursor: pointer;
 }
 
@@ -72,18 +96,18 @@ body {
     padding: 5px 10px;
     height: max-content;
     position: relative;
-    top: 1.25rem;
+    top: 20px;
 }
 
 .btn-post {
     width: max-content;
-    padding: 2.5008px 10px;
+    padding: 2.5008px 15px;
     font-size: 12pt;
     margin-left: 25px;
 }
 
 .btn-all, .btn-tech, .btn-social {
-    margin: .3125rem 0;
+    margin: 5px 0;
     width: 80%;
 }
 
@@ -108,7 +132,8 @@ body {
 
 .main-body {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    margin: .9375rem 0 0;
+    grid-template-columns: 15.625rem 1fr;
 }
 
 /* Hashtag filter */
@@ -128,25 +153,26 @@ body {
 }
 
 .task-item {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.4;
     color: #fafafa;
     background-color: #374151;
-    margin: 0 15px 25px;
-    padding: 10px 25px;
-    box-shadow: 5px 7.5px rgba(187, 213, 224, 0.582);
+    margin: 0 .9375rem 1.5625rem;
+    padding: .625rem 1.5625rem;
+    box-shadow: .3125rem .4688rem rgba(187, 213, 224, 0.582);
     display: flex;
     align-items: center;
+    border-radius: 16px;
 }
 
 .hashtag {
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 12px;
-    margin-left: 25px;
-    padding: 2.5008px 10px;
-    margin: 0 .9375rem;
-    border-radius: 3.125rem;
+    font-size: .75rem;
+    margin-left: 1.5625rem;
+    padding: .1563rem .625rem;
+    margin: 0 15px;
+    border-radius: 50px;
 }
 
 .hashtag-tech {
@@ -160,7 +186,7 @@ body {
 .source:link, .source:visited {
     color: aquamarine;
     text-decoration: none;
-    margin-left: .625rem;
+    margin-left: 10px;
 }
 
 .source:hover, .source:active {
@@ -172,15 +198,15 @@ body {
     margin-left: auto;
     display: flex;
     flex-shrink: 0;
-    gap: .625rem;
+    gap: 10px;
 }   
 
 .emoji-buttons button {
     background-color: #546480;
-    padding: .1563rem; 
-    border-radius: .625rem;
-    border: 1px solid rgb(44, 44, 44);
-    font-size: 1.125rem;
+    padding: 2.5008px; 
+    border-radius: 10px;
+    border: .0625rem solid rgb(44, 44, 44);
+    font-size: 18px;
     color: #fafafafa;
     cursor: pointer;
     transition: 0.3s;
