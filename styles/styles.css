@@ -173,3 +173,13 @@ body {
 .emoji-buttons {
     margin-left: auto;
 }   
+
+.emoji-buttons button {
+    background-color: #546480;
+    padding: .1563rem; 
+    border-radius: .625rem;
+    border: 1px solid rgb(44, 44, 44);
+    font-size: 1.125rem;
+    color: #fafafafa;
+    cursor: pointer;
+}
