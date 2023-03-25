@@ -183,4 +183,9 @@ body {
     font-size: 1.125rem;
     color: #fafafafa;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.emoji-buttons button:hover, .emoji-buttons button:active {
+    background-color: rgb(15, 148, 104);
 }
