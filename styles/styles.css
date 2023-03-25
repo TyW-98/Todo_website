@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #ddd9bf;
+    --bg-color: #1a4d6162;
     --box-primary-color: #374151;
     --box-secondary-color: #546480;
 }
@@ -83,12 +83,14 @@ body {
     font-weight: 600;
     font-size: 16pt;
     color: white;
+    position: relative;
+    top: .3125rem;
 }
 
 /* button styles */
 .btn {
     border: none;
-    padding: 5px;
+    padding: .3125rem;
     font-family: 'Anton', sans-serif;
     font-size: 21.328px;
     color: rgb(0, 0, 0);
@@ -99,17 +101,17 @@ body {
 
 .create-task {
     background-image: linear-gradient(135deg, rgb(160, 110, 17), rgb(192, 161, 24));
-    padding: 5px 10px;
+    padding: .3125rem .625rem;
     height: max-content;
     position: relative;
-    top: 20px;
+    top: 1.25rem;
 }
 
 .btn-post {
     width: max-content;
-    padding: 2.5008px 15px;
+    padding: .1563rem .9375rem;
     font-size: 12pt;
-    margin-left: 25px;
+    margin-left: 1.5625rem;
 }
 
 .btn-all, .btn-tech, .btn-social {
@@ -165,7 +167,7 @@ body {
     background-color: var(--box-primary-color);
     margin: 0 .9375rem 1.5625rem;
     padding: .625rem 1.5625rem;
-    box-shadow: .3125rem .4688rem rgba(187, 213, 224, 0.582);
+    box-shadow: .3125rem .4688rem rgba(89, 102, 107, 0.582);
     display: flex;
     align-items: center;
     border-radius: 16px;
@@ -220,4 +222,48 @@ body {
 
 .emoji-buttons button:hover, .emoji-buttons button:active {
     background-color: rgb(15, 148, 104);
+}
+
+/* Media Queries */
+@media (max-width:1100px) {
+    
+    .task-item {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-end;
+    }
+
+}
+
+@media (max-width:1041px) {
+
+    .input-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-form input, .input-form select {
+        width: auto;
+    }
+
+    .btn-post {
+        width: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    .input-form span {
+        font-size: 12pt;
+        top: 0;
+        left: .3125rem;
+    }
+
+    .main-body {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-all, .btn-tech, .btn-social {
+        width: 95%;
+    }
+
 }
