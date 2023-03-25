@@ -109,8 +109,6 @@ body {
 .main-body {
     display: grid;
     grid-template-columns: 250px 1fr;
-    margin-left: 25px;
-    gap: 48px;
 }
 
 /* Hashtag filter */
@@ -172,6 +170,9 @@ body {
 
 .emoji-buttons {
     margin-left: auto;
+    display: flex;
+    flex-shrink: 0;
+    gap: .625rem;
 }   
 
 .emoji-buttons button {
