@@ -13,3 +13,11 @@ postBtn.addEventListener("click", function () {
     }
 });
 
+function calcFactAge(year) {
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - year;
+    console.log(age);
+    return age;
+}
+
+const age1 = calcFactAge(2012);
