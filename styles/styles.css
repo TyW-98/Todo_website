@@ -87,6 +87,10 @@ body {
     top: .3125rem;
 }
 
+.hidden {
+    display: none !important;
+}
+
 /* button styles */
 .btn {
     border: none;
