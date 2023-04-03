@@ -121,4 +121,3 @@ const initialFacts = [
 ];
 
 const factAge = initialFacts.map((el) => calcFactAge(el.createdIn));
-console.log(factAge);
