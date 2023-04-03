@@ -47,3 +47,27 @@ const str = `The year for the current fact is ${calcFactAge(
 )}. The fact is ${totalUpVotes > voteFalse ? "True" : "False"}`;
 
 console.log(str);
+
+const newFact = ["Random Fact", 2012, true]
+const [fact, createdIn, isCorrect2] = newFact
+
+// Create new array from previous array (the three dots unpacks the previous array)
+const newFact2 = [...newFact, "Technology"]
+
+// Object
+const factObj = {
+    text: "Random Fact",
+    createdYear: 2012,
+    isCorrect: true,
+    category: "Technology",
+    createSummary: function () {
+        return `This fact is about ${this.category.toUpperCase()} and it is created in ${this.createdYear}`;
+    }
+}
+
+console.log(factObj.createSummary());
+
+const {category, isCorrect} = factObj;
+
+console.log(factObj.isCorrect);
+console.log(factObj["isCorrect"])
