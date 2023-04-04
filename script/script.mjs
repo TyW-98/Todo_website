@@ -2,6 +2,22 @@
 const postBtn = document.getElementsByClassName("create-task")[0];
 const form = document.querySelector(".input-form");
 const taskList = document.querySelector(".task-list");
+const techBtn = document.querySelector(".btn-tech");
+const socialBtn = document.querySelector(".btn-social");
+
+const CATEGORIES = [
+  { name: "technology", color: "rgba(66, 162, 201, 0.877)" },
+  { name: "science", color: "#eab308" },
+  { name: "finance", color: "#ef4444" },
+  { name: "social", color: "rgb(56, 184, 124)" },
+  { name: "entertainment", color: "#db2777" },
+  { name: "health", color: "#14b8a6" },
+  { name: "history", color: "#f97316" },
+  { name: "news", color: "#8b5cf6" },
+];
+
+techBtn.style.backgroundColor = CATEGORIES.find((cat) => cat.name === "technology").color;
+socialBtn.style.backgroundColor = CATEGORIES.find((cat) => cat.name === "social").color;
 
 postBtn.addEventListener("click", function () {
   if (form.classList.contains("hidden")) {
@@ -28,43 +44,10 @@ async function loadData() {
   });
   const data = await res.json();
   console.log(data);
+  // const filteredFacts = data.filter((fact) => fact.category.toLowerCase() === "technology");
+  // createFactList(filteredFacts);
   createFactList(data);
-  console.log(data[0]);
 }
-
-const initialFacts = [
-  {
-    id: 1,
-    text: "React is being developed by Meta (formerly facebook)",
-    source: "https://opensource.fb.com/",
-    category: "technology",
-    votesInteresting: 24,
-    votesMindblowing: 9,
-    votesFalse: 4,
-    createdIn: 2021,
-  },
-  {
-    id: 2,
-    text: "Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%",
-    source:
-      "https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids",
-    category: "social",
-    votesInteresting: 11,
-    votesMindblowing: 2,
-    votesFalse: 0,
-    createdIn: 2019,
-  },
-  {
-    id: 3,
-    text: "Lisbon is the capital of Portugal",
-    source: "https://en.wikipedia.org/wiki/Lisbon",
-    category: "social",
-    votesInteresting: 8,
-    votesMindblowing: 3,
-    votesFalse: 1,
-    createdIn: 2015,
-  },
-];
 
 function createFactList(factsArray) {
   for (let i = 0; i < factsArray.length; i++) {
@@ -72,8 +55,10 @@ function createFactList(factsArray) {
     const htmlFacts = `<li class=task-item>
       <p>${currentFacts.text}</p>
       <a href=${currentFacts.source} target="_blank" class="source">(source)</a>
-      <span class="hashtag hashtag-${
-        currentFacts.category.toLowerCase() === "technology" ? "tech" : "social"
+      <span class="hashtag" style="background-color:${
+        CATEGORIES.find(
+          (cat) => cat.name === currentFacts.category.toLowerCase()
+        ).color
       }">${currentFacts.category}</span>
       <div class="emoji-buttons">
       <button type="button">👍 ${
@@ -88,8 +73,5 @@ function createFactList(factsArray) {
       </div>
       </li>`;
     taskList.insertAdjacentHTML("beforeend", htmlFacts);
-  };
-};
-  
-
-
+  }
+}

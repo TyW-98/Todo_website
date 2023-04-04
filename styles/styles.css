@@ -137,13 +137,13 @@ body {
     background-image: linear-gradient(45deg, rgba(36, 127, 163, 0.76), rgb(56, 184, 124));
 }
 
-.btn-tech {
+/* .btn-tech {
     background-color: rgba(66, 162, 201, 0.877);
 }
 
 .btn-social {
     background-color: rgb(56, 184, 124);
-}
+} */
 
 /* main body */
 
@@ -190,14 +190,6 @@ body {
     padding: .1563rem .625rem;
     margin: 0 15px;
     border-radius: 50px;
-}
-
-.hashtag-tech {
-    background-color: rgba(66, 162, 201, 0.877);
-}
-
-.hashtag-social {
-    background-color: rgb(56, 184, 124);
 }
 
 .source:link, .source:visited {
