@@ -1,5 +1,3 @@
-import "./styles.css";
-
 function Header() {
   return (
     <header className="heading">
@@ -8,7 +6,9 @@ function Header() {
           <img src="logo.png" alt="logo-image" className="logo" />
           <h1 className="website-heading">Random Facts about anything</h1>
         </div>
-        <button type="button" className="create-task btn">Enter new facts</button>
+        <button type="button" className="create-task btn">
+          Enter new facts
+        </button>
       </div>
     </header>
   );
