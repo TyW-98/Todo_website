@@ -16,6 +16,22 @@ postBtn.addEventListener("click", function () {
 // Load facts in
 taskList.innerHTML = "";
 
+// Load data
+loadData();
+import config from "../config.js";
+async function loadData() {
+  const res = await fetch(config.database, {
+    headers: {
+      apikey: config.apiKey,
+      authorization: config.apiSecret,
+    },
+  });
+  const data = await res.json();
+  console.log(data);
+  createFactList(data);
+  console.log(data[0]);
+}
+
 const initialFacts = [
   {
     id: 1,
@@ -50,19 +66,30 @@ const initialFacts = [
   },
 ];
 
-for (let i = 0; i < initialFacts.length; i++) {
-  const currentFacts = initialFacts[i];
-  const htmlFacts = `<li class=task-item>
-    <p>${currentFacts.text}</p>
-    <a href=${currentFacts.source} target="_blank" class="source">(source)</a>
-    <span class="hashtag hashtag-${
-      currentFacts.category === "technology" ? "tech" : "social"
-    }">${currentFacts.category}</span>
-    <div class="emoji-buttons">
-    <button type="button">👍 ${currentFacts.votesInteresting}<strong>1</strong></button>
-    <button type="button">🚀 ${currentFacts.votesMindblowing}<strong>2</strong></button>
-    <button type="button">👎 ${currentFacts.votesFalse}<strong>3</strong></button>
-    </div>
-    </li>`;
-  taskList.insertAdjacentHTML("beforeend", htmlFacts);
-}
+function createFactList(factsArray) {
+  for (let i = 0; i < factsArray.length; i++) {
+    const currentFacts = factsArray[i];
+    const htmlFacts = `<li class=task-item>
+      <p>${currentFacts.text}</p>
+      <a href=${currentFacts.source} target="_blank" class="source">(source)</a>
+      <span class="hashtag hashtag-${
+        currentFacts.category.toLowerCase() === "technology" ? "tech" : "social"
+      }">${currentFacts.category}</span>
+      <div class="emoji-buttons">
+      <button type="button">👍 ${
+        currentFacts.votesInteresting
+      }<strong>1</strong></button>
+      <button type="button">🚀 ${
+        currentFacts.votesMindblowing
+      }<strong>2</strong></button>
+      <button type="button">👎 ${
+        currentFacts.votesFalse
+      }<strong>3</strong></button>
+      </div>
+      </li>`;
+    taskList.insertAdjacentHTML("beforeend", htmlFacts);
+  };
+};
+  
+
+
