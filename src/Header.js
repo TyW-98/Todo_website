@@ -1,6 +1,6 @@
 import "./styles.css";
 
-function App() {
+function Header() {
   return (
     <header className="heading">
       <div className="title">
@@ -14,4 +14,4 @@ function App() {
   );
 }
 
-export default App;
+export default Header;
