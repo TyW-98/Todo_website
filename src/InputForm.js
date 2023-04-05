@@ -1,6 +1,6 @@
 function InputForm() {
     return (
-        <h1>Input Form</h1>
+       <form className="input-form"></form>
     );
 };
 

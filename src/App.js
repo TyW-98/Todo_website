@@ -9,8 +9,12 @@ function App() {
     <>
       <Header />
       <InputForm />
-      <CategoryFilter />
-      <FactList />
+      <main>
+        <div className="main-body">
+          <CategoryFilter />
+          <FactList />
+        </div>
+      </main>
     </>
   );
 }
