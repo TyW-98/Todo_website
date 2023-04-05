@@ -3,9 +3,11 @@ function CategoryFilter({ CATEGORIES }) {
     <aside>
       <div className="hashtag-column">
         <ul className="hashtag-selector">
-            <li>
-                <button type="button" className="btn btn-all btn-cat">All</button>
-            </li>
+          <li>
+            <button type="button" className="btn btn-all btn-cat">
+              All
+            </button>
+          </li>
           {CATEGORIES.map((cat) => (
             <li key={cat.name}>
               <button

@@ -7,15 +7,12 @@ import CATEGORIES from "./HashtagColor.js";
 import { useState } from "react";
 
 function App() {
-
   const [showForm, setShowForm] = useState(false);
 
   return (
     <>
-      <Header onButtonClick={setShowForm}/>
-
-      {showForm ? <InputForm /> : null}
-
+      <Header onButtonClick={setShowForm} />
+      {showForm ? <InputForm CATEGORIES={CATEGORIES} /> : null}
       <main>
         <div className="main-body">
           <CategoryFilter CATEGORIES={CATEGORIES} />

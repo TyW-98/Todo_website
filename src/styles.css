@@ -115,7 +115,7 @@ body {
     width: max-content;
     padding: .1563rem .9375rem;
     font-size: 12pt;
-    margin-left: 1.5625rem;
+    margin: 0 1rem;
 }
 
 .btn-post:hover {
@@ -263,7 +263,7 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .btn-all, .btn-tech, .btn-social {
+    .btn-cat {
         width: 95%;
     }
 
