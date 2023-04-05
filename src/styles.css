@@ -128,7 +128,7 @@ body {
     width: 80%;
 }
 
-.btn-all:hover, .btn-tech:hover, .btn-social:hover {
+.btn-cat:hover {
     transform: scale(110%);
     transition: 0.3s;
 }
