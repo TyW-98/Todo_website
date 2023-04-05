@@ -4,12 +4,18 @@ import CategoryFilter from "./CategoryFilter";
 import InputForm from "./InputForm";
 import FactList from "./FactList";
 import CATEGORIES from "./HashtagColor.js";
+import { useState } from "react";
 
 function App() {
+
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <>
-      <Header />
-      <InputForm />
+      <Header onButtonClick={setShowForm}/>
+
+      {showForm ? <InputForm /> : null}
+
       <main>
         <div className="main-body">
           <CategoryFilter CATEGORIES={CATEGORIES} />
