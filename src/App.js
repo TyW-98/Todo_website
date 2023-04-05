@@ -7,7 +7,7 @@ import CATEGORIES from "./HashtagColor.js";
 
 function App() {
   return (
-    <>
+    <div className="container">
       <Header />
       <InputForm />
       <main>
@@ -16,7 +16,7 @@ function App() {
           <FactList CATEGORIES={CATEGORIES} />
         </div>
       </main>
-    </>
+    </div>
   );
 }
 
