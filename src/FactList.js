@@ -44,6 +44,7 @@ function FactList({ CATEGORIES }) {
           <Fact key={fact.id} fact={fact} CATEGORIES={CATEGORIES} />
         ))}
       </ul>
+      <p>The total number of Facts currently on the website is {facts.length}.</p>
     </section>
   );
 }
