@@ -1,4 +1,4 @@
-function Voting({ fact }) {
+function Voting({fact}) {
   return (
     <>
       <button type="button">

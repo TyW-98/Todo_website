@@ -3,6 +3,7 @@ import Header from "./Header.js";
 import CategoryFilter from "./CategoryFilter";
 import InputForm from "./InputForm";
 import FactList from "./FactList";
+import CATEGORIES from "./HashtagColor.js";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <main>
         <div className="main-body">
           <CategoryFilter />
-          <FactList />
+          <FactList CATEGORIES={CATEGORIES} />
         </div>
       </main>
     </>
