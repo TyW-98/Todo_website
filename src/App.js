@@ -12,7 +12,7 @@ function App() {
       <InputForm />
       <main>
         <div className="main-body">
-          <CategoryFilter />
+          <CategoryFilter CATEGORIES={CATEGORIES} />
           <FactList CATEGORIES={CATEGORIES} />
         </div>
       </main>
