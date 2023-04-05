@@ -1,4 +1,4 @@
-function Header({onButtonClick}) {
+function Header({ status, onButtonClick }) {
   return (
     <header className="heading">
       <div className="title">
@@ -6,8 +6,12 @@ function Header({onButtonClick}) {
           <img src="logo.png" alt="logo-image" className="logo" />
           <h1 className="website-heading">Random Facts about anything</h1>
         </div>
-        <button type="button" className="create-task btn" onClick={() =>onButtonClick((show) =>!show)}>
-          Enter new facts
+        <button
+          type="button"
+          className="create-task btn"
+          onClick={() => onButtonClick((show) => !show)}
+        >
+          {status ? "Close Form" : "Post New Fact"}
         </button>
       </div>
     </header>

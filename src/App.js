@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <Header onButtonClick={setShowForm} />
+      <Header status={showForm} onButtonClick={setShowForm} />
       {showForm ? <InputForm CATEGORIES={CATEGORIES} /> : null}
       <main>
         <div className="main-body">
