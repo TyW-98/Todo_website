@@ -61,15 +61,15 @@ function createFactList(factsArray) {
         ).color
       }">${currentFacts.category}</span>
       <div class="emoji-buttons">
-      <button type="button">👍 ${
+      <button type="button">👍 <strong>${
         currentFacts.votesInteresting
-      }<strong>1</strong></button>
-      <button type="button">🚀 ${
+      }</strong></button>
+      <button type="button">🚀 <strong>${
         currentFacts.votesMindblowing
-      }<strong>2</strong></button>
-      <button type="button">👎 ${
+      }</strong></button>
+      <button type="button">👎 <strong>${
         currentFacts.votesFalse
-      }<strong>3</strong></button>
+      }</strong></button>
       </div>
       </li>`;
     taskList.insertAdjacentHTML("beforeend", htmlFacts);
