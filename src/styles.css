@@ -229,7 +229,10 @@ body {
 .loading-text {
     color: rgb(15, 44, 170);
     font-family: 'Times New Roman', Times, serif;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: .625rem 0 0;
+    font-weight: 800;
 }
 
 /* Media Queries */
