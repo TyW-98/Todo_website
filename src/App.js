@@ -4,12 +4,20 @@ import CategoryFilter from "./CategoryFilter";
 import InputForm from "./InputForm";
 import FactList from "./FactList";
 import CATEGORIES from "./HashtagColor.js";
-import initialFacts from "./initialFacts.js";
-import { useState } from "react";
+import supabase from "./db.js";
+import { useState, useEffect } from "react";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
-  const [facts, setFacts] = useState(initialFacts);
+  const [facts, setFacts] = useState([]);
+
+  useEffect(function () {
+    async function getData() {
+      const { data: facts, error } = await supabase.from("Task").select("*");
+      setFacts(facts);
+    }
+    getData();
+  }, []);
 
   return (
     <>
