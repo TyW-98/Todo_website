@@ -13,7 +13,7 @@ function App() {
 
   useEffect(function () {
     async function getData() {
-      const { data: facts, error } = await supabase.from("Task").select("*");
+      const { data: facts, error } = await supabase.from("Facts").select("*");
       setFacts(facts);
     }
     getData();
