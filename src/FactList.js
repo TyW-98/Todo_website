@@ -11,7 +11,7 @@ function FactList(props) {
           <Fact key={fact.id} fact={fact} CATEGORIES={CATEGORIES} />
         ))}
       </ul>
-      <p>
+      <p className="loading-text">
         The total number of Facts currently on the website is {facts.length}.
       </p>
     </section>
