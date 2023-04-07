@@ -155,6 +155,7 @@ body {
     display: grid;
     margin: .9375rem 0 0;
     grid-template-columns: 15.625rem 1fr;
+    height: 80vh;
 }
 
 /* Hashtag filter */
@@ -168,6 +169,10 @@ body {
 }
 
 /* Main Content */
+
+#main-content {
+    overflow: scroll;
+}
 
 .task-list {
     list-style: none;
