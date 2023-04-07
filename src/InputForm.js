@@ -19,12 +19,14 @@ function InputForm(props) {
   const [text, setText] = useState("");
   const [source, setSource] = useState("");
   const [category, setCategory] = useState("");
+  const [uploadStatus, setUploadStatus] = useState(false);
 
   async function submitFact(event) {
     event.preventDefault();
 
     if (text && isURL(source) && category) {
 
+      setUploadStatus(true);
       const { data: newFact, error } = await supabase
         .from("Facts")
         .insert([{ text, source, category }])
@@ -35,6 +37,7 @@ function InputForm(props) {
       setSource("");
       setCategory("");
     }
+    setUploadStatus(false)
   }
 
   return (
@@ -45,6 +48,7 @@ function InputForm(props) {
           placeholder="Input the fact here"
           value={text}
           onChange={(event) => setText(event.target.value)}
+          disabled= {uploadStatus}
         />
         <span>{text.length}</span>
         <input
@@ -52,17 +56,19 @@ function InputForm(props) {
           placeholder="Input the URL to the source"
           value={source}
           onChange={(event) => setSource(event.target.value)}
+          disabled = {uploadStatus}
         />
         <select
           value={category}
           onChange={(event) => setCategory(event.target.value)}
+          disabled = {uploadStatus}
         >
           <option value="">Choose a category</option>
           {CATEGORIES.map((cat) => (
             <option value={cat.name}>{cat.name.toUpperCase()}</option>
           ))}
         </select>
-        <button className="btn btn-post">Post fact</button>
+        <button className="btn btn-post" disabled={uploadStatus}>{uploadStatus ? "Fact is uploading": "Post Fact"}</button>
       </div>
     </form>
   );
