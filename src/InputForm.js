@@ -1,4 +1,5 @@
 import { useState } from "react";
+import supabase from "./db.js";
 
 function isURL(string) {
   let url;
@@ -14,27 +15,22 @@ function isURL(string) {
 function InputForm(props) {
   const CATEGORIES = props.CATEGORIES;
   const setFacts = props.setFacts;
-  const setShowForm = props.setShowForm;
 
   const [text, setText] = useState("");
   const [source, setSource] = useState("");
   const [category, setCategory] = useState("");
 
-  function submitFact(event) {
+  async function submitFact(event) {
     event.preventDefault();
 
-    if (text && isURL(source) && category && text.length <= 200) {
-      const newFact = {
-        id: Math.round(Math.random() * 1000000),
-        text: text,
-        source: source,
-        category: category,
-        votesInteresting: 0,
-        votesMindblowing: 0,
-        votesFalse: 0,
-        createdIn: new Date().getFullYear(),
-      };
-      setFacts((facts) => [newFact, ...facts]);
+    if (text && isURL(source) && category) {
+
+      const { data: newFact, error } = await supabase
+        .from("Facts")
+        .insert([{ text, source, category }])
+        .select();
+
+      setFacts((facts) => [newFact[0], ...facts]);
       setText("");
       setSource("");
       setCategory("");
@@ -50,7 +46,7 @@ function InputForm(props) {
           value={text}
           onChange={(event) => setText(event.target.value)}
         />
-        <span>{200 - text.length}</span>
+        <span>{text.length}</span>
         <input
           type="text"
           placeholder="Input the URL to the source"
