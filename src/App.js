@@ -47,7 +47,7 @@ function App() {
           {isLoading ? (
             <Loader />
           ) : (
-            <FactList categories={CATEGORIES} initialFacts={facts} />
+            <FactList categories={CATEGORIES} initialFacts={facts} setFacts={setFacts}/>
           )}
         </div>
       </main>

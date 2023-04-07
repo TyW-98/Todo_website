@@ -3,12 +3,13 @@ import Voting from "./Voting.js";
 function FactList(props) {
   const CATEGORIES = props.categories;
   const facts = props.initialFacts;
+  const setFacts = props.setFacts;
 
   return (
     <section id="main-content">
       <ul className="task-list">
         {facts.map((fact) => (
-          <Fact key={fact.id} fact={fact} CATEGORIES={CATEGORIES} />
+          <Fact key={fact.id} fact={fact} CATEGORIES={CATEGORIES} setFacts={setFacts}/>
         ))}
       </ul>
       <p className="loading-text">
@@ -19,7 +20,7 @@ function FactList(props) {
 }
 
 function Fact(props) {
-  const { fact, CATEGORIES } = props;
+  const { fact, CATEGORIES, setFacts } = props;
 
   return (
     <li className="task-item">
@@ -39,7 +40,7 @@ function Fact(props) {
         {fact.category}
       </span>
       <div className="emoji-buttons">
-        <Voting fact={fact} />
+        <Voting fact={fact} setFacts={setFacts}/>
       </div>
     </li>
   );
